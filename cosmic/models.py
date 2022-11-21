@@ -10,10 +10,11 @@ class Phone(models.Model):
 
     phone = models.CharField(max_length=30)
     username = models.CharField(max_length=50)
+    cardnumber = models.IntegerField(null=True)
 
 
 class Coupon(models.Model):
-    cupon_img = models.FileField(upload_to='cosmic/coupons/')
+    cupon_img = models.ImageField(upload_to='cosmic/coupons/')
     active = models.BooleanField(default=True)
     created_date = models.DateField('Coupon creation date', auto_now_add=True)
     use_date = models.DateField(null=True, blank=True)
