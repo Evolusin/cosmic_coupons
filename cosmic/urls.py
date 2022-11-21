@@ -6,6 +6,8 @@ from rest_framework import routers
 
 
 urlpatterns = [
-    path('phones/', views.getData),
-    path('phone_add/', views.addPhone),
+    path('api_phones/', views.getData),
+    path('api_phone_add/', views.addPhone),
+    path('api_coupon_add/', views.addCoupon),
+    path('coupons', views.coupons, name="coupons")
 ]
